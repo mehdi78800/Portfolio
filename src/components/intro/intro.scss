@@ -1,13 +1,29 @@
+@import "../../global.scss";
+
 .intro {
   background-color: white;
-  display: flex;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-  .left {
-    flex: 0.5;
-    background-color: yellow;
+  .text {
+    background-color: $mainColor;
+    padding: 100px;
+    border-radius: 0px 200px 0px 200px;
+    h1 {
+      color: $accentColor;
+    }
   }
-  .right {
-    flex: 0.5;
-    background-color: red;
+  .link {
+    height: 50px;
+    .arrow {
+      transform: scale(2);
+      color: $accentColor;
+      transition: all 0.5s ease;
+    }
+    .arrow:hover {
+      transform: scale(3);
+    }
   }
 }

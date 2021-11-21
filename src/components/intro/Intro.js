@@ -1,10 +1,19 @@
 import "./intro.scss";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export default function Intro() {
   return (
     <div className="intro" id="intro">
-      <div className="left"></div>
-      <div className="right"></div>
+      <div className="text">
+        <h2>Hi There, I'm</h2>
+        <h1>Mehdi Regragui</h1>
+        <h3>Développeur Web</h3>
+      </div>
+      <div className="link">
+        <a href="#portfolio">
+          <KeyboardArrowDownIcon className="arrow" />
+        </a>
+      </div>
     </div>
   );
 }

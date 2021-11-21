@@ -1,19 +1,19 @@
 @import "../../global.scss";
 
 .menu {
-  width: 300px;
+  width: 100%;
   height: 100vh;
-  background-color: $mainColor;
+  background-color: $secondColor;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 2;
-  right: -300px;
+  right: -100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 1.5s ease;
+  transition: all 1s ease;
 
   &.active {
     right: 0;
@@ -21,7 +21,7 @@
 
   ul {
     margin: 0;
-    padding: 0;
+    padding-left: 20%;
     list-style: none;
     font-size: 30px;
     font-weight: 400;
@@ -42,14 +42,28 @@
 
       .iconNav {
         transform: scale(1.3);
+        transition: all 0.5s ease;
+        margin-right: 20px;
       }
 
       &:hover {
         font-weight: 700;
+        color: $accentColor;
         .iconNav {
           transform: scale(1.4);
         }
       }
+    }
+  }
+}
+
+@media (min-width: 60em) {
+  .menu {
+    width: 25%;
+    box-shadow: -3px 0px 5px $secondColor;
+    ul {
+      margin: 0;
+      padding-left: 0;
     }
   }
 }

@@ -10,24 +10,29 @@ export default function Menu({ menuOpen, setMenuOpen }) {
     <div className={"menu " + (menuOpen && "active")}>
       <ul>
         <li onClick={() => setMenuOpen(false)}>
-          <HomeIcon className="iconNav" />
-          <a href="#intro">Home</a>
+          <a href="#intro">
+            <HomeIcon className="iconNav" /> Home
+          </a>
         </li>
         <li onClick={() => setMenuOpen(false)}>
-          <DescriptionIcon className="iconNav" />
-          <a href="#portfolio">Portfolio</a>
+          <a href="#portfolio">
+            <DescriptionIcon className="iconNav" /> Portfolio
+          </a>
         </li>
         <li onClick={() => setMenuOpen(false)}>
-          <CodeIcon className="iconNav" />
-          <a href="#works">Works</a>
+          <a href="#works">
+            <CodeIcon className="iconNav" /> Works
+          </a>
         </li>
         <li onClick={() => setMenuOpen(false)}>
-          <ForumIcon className="iconNav" />
-          <a href="#testimonials">Testimonials</a>
+          <a href="#testimonials">
+            <ForumIcon className="iconNav" /> Testimonials
+          </a>
         </li>
         <li onClick={() => setMenuOpen(false)}>
-          <PermContactCalendarIcon className="iconNav" />
-          <a href="#contact">Contact</a>
+          <a href="#contact">
+            <PermContactCalendarIcon className="iconNav" /> Contact
+          </a>
         </li>
       </ul>
     </div>
