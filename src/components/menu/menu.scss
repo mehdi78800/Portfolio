@@ -3,7 +3,7 @@
 .menu {
   width: 100%;
   height: 100vh;
-  background-color: $secondColor;
+  background-color: #ecf0f3;
   position: fixed;
   top: 0;
   right: 0;
@@ -19,25 +19,32 @@
     right: 0;
   }
 
+  /* Neumorphisme Début*/
+  box-shadow: 3px 3px 7px #ffffff, -3px -3px 5px #ceced1,
+    inset 3px 3px 7px #ffffff, inset -3px 3px 5px #ceced1;
+
   ul {
-    margin: 0;
+    margin: 0 0 0 10%;
     padding-left: 20%;
-    list-style: none;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 400;
-    color: white;
-    width: 80%;
+    width: 100%;
+    list-style: none;
 
     li {
       cursor: pointer;
-      margin-bottom: 20px;
       padding: 5px;
 
       a {
-        margin-left: 20px;
-        font-size: inherit;
-        color: inherit;
+        color: #31344b;
         text-decoration: none;
+        display: block;
+        margin-top: 32px;
+        font-size: 18px;
+        padding: 15px 25px;
+        width: 60%;
+        border-radius: 8px;
+        box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
       }
 
       .iconNav {
@@ -55,14 +62,15 @@
       }
     }
   }
+  /* Neumorphisme Fin*/
 }
 
 @media (min-width: 60em) {
   .menu {
     width: 25%;
-    box-shadow: -3px 0px 5px $secondColor;
+    // box-shadow: -3px 0px 5px $secondColor;
     ul {
-      margin: 0;
+      margin-left: 30%;
       padding-left: 0;
     }
   }
