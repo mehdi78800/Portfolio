@@ -1,20 +1,29 @@
 @import "../../global.scss";
 
 .intro {
-  background-color: white;
+  background-color: $secondColor;
   display: grid;
   justify-content: center;
   align-items: center;
   text-align: center;
 
   .text {
-    background-color: $mainColor;
-    padding: 100px;
-    border-radius: 0px 200px 0px 200px;
+    background-color: $secondColor;
+    color: $mainColor;
+    border-radius: 50px;
+    box-shadow: -5px -5px 5px #ffffff, 5px 5px 5px #ceced1;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 400px;
+
     h1 {
       color: $accentColor;
     }
+    h3 {
+      padding-top: 20px;
+    }
   }
+
   .link {
     height: 50px;
     .arrow {
@@ -25,5 +34,12 @@
     .arrow:hover {
       transform: scale(3);
     }
+  }
+}
+
+@media (min-width: 60em) {
+  .intro .text {
+    padding: 100px 50px 100px 50px;
+    width: auto;
   }
 }
