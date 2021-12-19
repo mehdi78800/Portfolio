@@ -10,6 +10,7 @@
   z-index: 3;
   transition: all 1s ease;
   box-shadow: 0px 3px 5px $secondColor;
+  overflow-y: hidden;
 
   .wrapper {
     padding: 10px 30px;
@@ -28,6 +29,14 @@
         text-decoration: none;
         color: $accentColor;
         margin-right: 40px;
+
+        img {
+          height: 150px;
+          top: -40px;
+          left: 5px;
+          display: flex;
+          position: absolute;
+        }
       }
 
       .itemContainer {
@@ -48,22 +57,49 @@
     }
     .right {
       width: 50px;
+      // .hamburger {
+      //   width: 30px;
+      //   height: 28px;
+      //   display: flex;
+      //   flex-direction: column;
+      //   justify-content: space-between;
+      //   cursor: pointer;
+      //   padding-left: 5px;
+      //   span {
+      //     width: 99%;
+      //     height: 5px;
+      //     background-color: $accentColor;
+      //     border-radius: 8px;
+      //     transform-origin: left;
+      //     transition: all 1s ease;
+      //     border: 0.5px solid black;
+      //   }
+      // }
       .hamburger {
+        text-decoration: none;
+        display: block;
+        font-size: 18px;
+        padding: 10px;
         width: 30px;
         height: 28px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: pointer;
-        padding-left: 5px;
+        border-radius: 8px;
+        height: 50%;
+        box-shadow: inset 3px 3px 7px #4c4e4c, inset -3px 3px 5px $mainColor;
+
         span {
-          width: 99%;
-          height: 5px;
-          background-color: $accentColor;
+          display: block;
+          background-color: #ecf0f3;
+          width: 12px;
+          height: 3px;
+          // margin: 2px 0px 2px 0px;
+
+          margin-left: 5px;
+          margin-top: 3px;
+          margin-bottom: 3px;
+          padding-right: 10px;
           border-radius: 8px;
           transform-origin: left;
           transition: all 1s ease;
-          border: 0.5px solid black;
         }
       }
     }
@@ -73,17 +109,24 @@
     background: $secondColor;
     color: white;
 
+    .logo img {
+      filter: invert(100%);
+    }
     .hamburger {
+      box-shadow: inset 3px 3px 7px #ffffff, inset -3px 3px 5px $secondColor !important;
       span {
+        width: 7.5px !important;
+        margin-left: 8px !important;
+
         &:first-child {
-          background-color: white;
+          background-color: #31344b;
           transform: rotate(45deg);
         }
         &:nth-child(2) {
           opacity: 0;
         }
         &:last-child {
-          background-color: white;
+          background-color: #31344b;
           transform: rotate(-45deg);
         }
       }
