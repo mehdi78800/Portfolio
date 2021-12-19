@@ -57,8 +57,8 @@
 
       &:hover {
         font-weight: 700;
-        color: $accentColor;
         .iconNav {
+          color: $accentColor;
           transform: scale(1.2);
         }
       }
