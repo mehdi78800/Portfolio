@@ -1,81 +1,137 @@
 @import "../../global.scss";
 
-.menu {
+.navigation {
+  position: relative;
+  // width: 400px;
   width: 100%;
-  height: 100vh;
-  background-color: $secondColor;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  right: -100%;
+  height: 70px;
+  background: #fff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  transition: all 1s ease;
-
-  &.active {
-    right: 0;
-  }
-
-  /* Neumorphisme Début*/
-  box-shadow: 3px 3px 7px #ffffff, -3px -3px 5px #ceced1,
-    inset 3px 3px 7px #ffffff, inset -3px 3px 5px #ceced1;
+  align-items: center;
+  border-radius: 10px;
+  overflow: visible;
 
   ul {
-    margin: 0 0 0 10%;
-    padding-left: 20%;
-    font-size: 27px;
-    font-weight: 400;
+    position: relative;
+    display: flex;
     width: 100%;
-    list-style: none;
+    overflow: visible;
+    padding: 0;
 
     li {
-      cursor: pointer;
-      padding: 5px;
-      margin-top: 32px;
+      position: relative;
+      list-style: none;
+      width: 20%;
+      height: 100%;
+      z-index: 1;
+      overflow: visible;
 
       a {
-        color: #31344b;
-        text-decoration: none;
-        display: block;
-        font-size: 18px;
-        padding: 15px 25px;
-        width: 60%;
-        height: 30px;
-        border-radius: 30px;
-        box-shadow: -3px -3px 2px #ffffff, 3px 3px 2px #ceced1;
-      }
-
-      .iconNav {
-        transition: all 0.5s ease;
-        margin-right: 20px;
         position: relative;
-        bottom: -4px;
-      }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        overflow: visible;
 
-      &:hover {
-        font-weight: 700;
-        .iconNav {
+        .icon {
+          position: relative;
+          display: block;
+          line-height: 75px;
+          font-size: 1.5em;
+          text-align: center;
+          transition: 0.5s;
           color: $accentColor;
-          transform: scale(1.2);
+        }
+
+        .text {
+          position: absolute;
+          color: $mainColor;
+          font-weight: 400;
+          font-size: 0.75em;
+          letter-spacing: 0.05em;
+          transition: 0.5s;
+          opacity: 0;
+          transform: translateY(20px);
         }
       }
     }
   }
-  /* Neumorphisme Fin*/
 }
 
-@media (min-width: 60em) {
-  .menu {
-    width: 25%;
-    border-radius: 200px 0px 0px 200px;
+.navigation ul li.active a .icon {
+  transform: translateY(-35px);
+}
 
-    // box-shadow: -3px 0px 5px $secondColor;
-    ul {
-      margin-left: 30%;
-      padding-left: 0;
-    }
+.navigation ul li.active a .text {
+  opacity: 1;
+  transform: translateY(10px);
+}
+
+.indicatorDiv {
+  position: absolute;
+  width: 20%;
+  height: 60px;
+  overflow: visible;
+  transition: 0.5s;
+
+  .indicator {
+    display: flex;
+    position: relative;
+    border-radius: 50%;
+    border: 6px solid $secondColor;
+    top: -60%;
+    width: 60px;
+    height: 60px;
+    background: $mainColor;
+    overflow: visible;
+    margin: auto;
   }
+}
+
+.indicator::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 $secondColor;
+}
+
+.indicator::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -10px 0 0 $secondColor;
+}
+
+.navigation ul li:nth-child(1).active ~ .indicatorDiv {
+  transform: translateX(calc(0));
+}
+
+.navigation ul li:nth-child(2).active ~ .indicatorDiv {
+  transform: translateX(calc(20vw));
+}
+
+.navigation ul li:nth-child(3).active ~ .indicatorDiv {
+  transform: translateX(calc(40vw));
+}
+
+.navigation ul li:nth-child(4).active ~ .indicatorDiv {
+  transform: translateX(calc(60vw));
+}
+
+.navigation ul li:nth-child(5).active ~ .indicatorDiv {
+  transform: translateX(calc(80vw));
 }
