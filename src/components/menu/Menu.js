@@ -1,8 +1,8 @@
 import "./menu.scss";
 import HomeIcon from "@mui/icons-material/Home";
-import DescriptionIcon from "@mui/icons-material/Description";
+import SchoolIcon from "@mui/icons-material/School";
+import WorkIcon from "@mui/icons-material/Work";
 import CodeIcon from "@mui/icons-material/Code";
-import ForumIcon from "@mui/icons-material/Forum";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 
 import { useState } from "react";
@@ -18,21 +18,21 @@ export default function Menu() {
     },
     {
       id: 2,
-      titre: "Portfolio",
-      text: "portfolio",
-      icon: DescriptionIcon,
+      titre: "Formations",
+      text: "formation",
+      icon: SchoolIcon,
     },
     {
       id: 3,
-      titre: "Works",
-      text: "works",
-      icon: CodeIcon,
+      titre: "Experiences",
+      text: "experience",
+      icon: WorkIcon,
     },
     {
       id: 4,
-      titre: "Testimonials",
-      text: "testimonials",
-      icon: ForumIcon,
+      titre: "Projets",
+      text: "projet",
+      icon: CodeIcon,
     },
     {
       id: 5,
