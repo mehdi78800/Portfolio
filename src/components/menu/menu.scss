@@ -121,17 +121,17 @@
 }
 
 .navigation ul li:nth-child(2).active ~ .indicatorDiv {
-  transform: translateX(calc(20vw));
+  transform: translateX(calc(100%));
 }
 
 .navigation ul li:nth-child(3).active ~ .indicatorDiv {
-  transform: translateX(calc(40vw));
+  transform: translateX(calc(200%));
 }
 
 .navigation ul li:nth-child(4).active ~ .indicatorDiv {
-  transform: translateX(calc(60vw));
+  transform: translateX(calc(300%));
 }
 
 .navigation ul li:nth-child(5).active ~ .indicatorDiv {
-  transform: translateX(calc(80vw));
+  transform: translateX(calc(400%));
 }
