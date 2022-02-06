@@ -25,6 +25,8 @@
   }
 
   .link {
+    position: relative;
+    top: -60px;
     height: 50px;
     .arrow {
       transform: scale(2);
@@ -37,9 +39,8 @@
   }
 }
 
-@media (min-width: 60em) {
+@media (max-width: 500px) {
   .intro .text {
-    padding: 100px 50px 100px 50px;
-    width: auto;
+    width: 300px;
   }
 }

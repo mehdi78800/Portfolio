@@ -115,3 +115,10 @@
 .navigation ul li:nth-child(5).active ~ .indicatorDiv {
   transform: translateX(calc(400%));
 }
+
+@media screen and (max-width: 500px) {
+  .navigation {
+    width: 95%;
+    bottom: 0px;
+  }
+}

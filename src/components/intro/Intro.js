@@ -10,7 +10,7 @@ export default function Intro() {
         <h3>Développeur Web</h3>
       </div>
       <div className="link">
-        <a href="#portfolio">
+        <a href="#formation">
           <KeyboardArrowDownIcon className="arrow" />
         </a>
       </div>

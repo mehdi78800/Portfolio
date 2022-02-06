@@ -8,13 +8,13 @@ import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import { useState } from "react";
 
 export default function Menu() {
-  const [activeId, setActiveId] = useState(1);
+  const [activeId, setActiveId] = useState(3);
   const components = [
     {
       id: 1,
-      titre: "Home",
-      text: "intro",
-      icon: HomeIcon,
+      titre: "Experiences",
+      text: "experience",
+      icon: WorkIcon,
     },
     {
       id: 2,
@@ -24,9 +24,9 @@ export default function Menu() {
     },
     {
       id: 3,
-      titre: "Experiences",
-      text: "experience",
-      icon: WorkIcon,
+      titre: "Home",
+      text: "intro",
+      icon: HomeIcon,
     },
     {
       id: 4,
