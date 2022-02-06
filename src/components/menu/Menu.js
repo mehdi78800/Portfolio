@@ -5,35 +5,64 @@ import CodeIcon from "@mui/icons-material/Code";
 import ForumIcon from "@mui/icons-material/Forum";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 
-export default function Menu({ menuOpen, setMenuOpen }) {
+import { useState } from "react";
+
+export default function Menu() {
+  const [activeId, setActiveId] = useState(1);
+  const components = [
+    {
+      id: 1,
+      titre: "Home",
+      text: "intro",
+      icon: HomeIcon,
+    },
+    {
+      id: 2,
+      titre: "Portfolio",
+      text: "portfolio",
+      icon: DescriptionIcon,
+    },
+    {
+      id: 3,
+      titre: "Works",
+      text: "works",
+      icon: CodeIcon,
+    },
+    {
+      id: 4,
+      titre: "Testimonials",
+      text: "testimonials",
+      icon: ForumIcon,
+    },
+    {
+      id: 5,
+      titre: "Contact",
+      text: "contact",
+      icon: PermContactCalendarIcon,
+    },
+  ];
+
   return (
-    <div className={"menu " + (menuOpen && "active")}>
+    <div className="navigation ">
       <ul>
-        <li onClick={() => setMenuOpen(false)}>
-          <a href="#intro">
-            <HomeIcon className="iconNav" /> Home
-          </a>
-        </li>
-        <li onClick={() => setMenuOpen(false)}>
-          <a href="#portfolio">
-            <DescriptionIcon className="iconNav" /> Portfolio
-          </a>
-        </li>
-        <li onClick={() => setMenuOpen(false)}>
-          <a href="#works">
-            <CodeIcon className="iconNav" /> Works
-          </a>
-        </li>
-        <li onClick={() => setMenuOpen(false)}>
-          <a href="#testimonials">
-            <ForumIcon className="iconNav" /> Testimonials
-          </a>
-        </li>
-        <li onClick={() => setMenuOpen(false)}>
-          <a href="#contact">
-            <PermContactCalendarIcon className="iconNav" /> Contact
-          </a>
-        </li>
+        {components.map((component, index) => (
+          <li
+            key={index}
+            onClick={() => setActiveId(component.id)}
+            className={`toggle-container ${
+              activeId === component.id ? "active" : ""
+            }`}
+          >
+            <a href={`#${component.text}`}>
+              <span className="icon">{<component.icon />}</span>
+              <span className="text">{component.titre}</span>
+            </a>
+          </li>
+        ))}
+
+        <div className="indicatorDiv">
+          <div className="indicator"></div>
+        </div>
       </ul>
     </div>
   );
