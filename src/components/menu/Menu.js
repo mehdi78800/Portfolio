@@ -5,11 +5,17 @@ import WorkIcon from "@mui/icons-material/Work";
 import CodeIcon from "@mui/icons-material/Code";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function Menu() {
+export default function Menu(props) {
   const [activeId, setActiveId] = useState(3);
   const components = [
+    {
+      id: 3,
+      titre: "Home",
+      text: "intro",
+      icon: HomeIcon,
+    },
     {
       id: 1,
       titre: "Experiences",
@@ -22,12 +28,7 @@ export default function Menu() {
       text: "formation",
       icon: SchoolIcon,
     },
-    {
-      id: 3,
-      titre: "Home",
-      text: "intro",
-      icon: HomeIcon,
-    },
+
     {
       id: 4,
       titre: "Projets",
@@ -42,13 +43,19 @@ export default function Menu() {
     },
   ];
 
+  useEffect(() => {
+    const idToActive = components.find(
+      (component) => component.text === props.liToActive
+    ).id;
+    setActiveId(idToActive);
+  }, [props.liToActive]);
+
   return (
     <div className="navigation ">
       <ul>
         {components.map((component, index) => (
           <li
             key={index}
-            onClick={() => setActiveId(component.id)}
             className={`toggle-container ${
               activeId === component.id ? "active" : ""
             }`}
