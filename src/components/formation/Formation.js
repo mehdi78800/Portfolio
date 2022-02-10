@@ -29,14 +29,24 @@ export default function Formation(props) {
         {formations.map((data, key) => {
           return (
             <div className="diplome" key={key}>
-              <h3>{data.company}</h3>
+              <div className="row">
+                <div className="col-3">
+                  <img className="logo" src={data.img} alt={data.company} />
+                </div>
+                <div className="col-9">
+                  <h3 className={data.company === "Greta" ? "greta" : ""}>
+                    {data.company}
+                  </h3>
+                </div>
+              </div>
+              <hr />
               <p className="title">{data.title}</p>
               <p className="date">
                 {data.start_date === data.end_date
                   ? data.start_date
                   : data.start_date + " - " + data.end_date}
               </p>
-              <img src={data.link} alt={data.title} />
+              <img className="certif" src={data.link} alt={data.title} />
               <div className="btnContainer">
                 <a
                   download={data.title + ".png"}

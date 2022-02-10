@@ -5,6 +5,7 @@ export const formations = [
     start_date: "2019",
     end_date: "2021",
     link: "/assets/img/diplomes/master.png",
+    img: "/assets/img/ecoles/3wa.png",
   },
   {
     company: "Greta",
@@ -12,6 +13,7 @@ export const formations = [
     start_date: "2018",
     end_date: "2019",
     link: "/assets/img/diplomes/bts.png",
+    img: "/assets/img/ecoles/greta.png",
   },
   {
     company: "ISOGRAD",
@@ -19,5 +21,6 @@ export const formations = [
     start_date: "2019",
     end_date: "2019",
     link: "/assets/img/diplomes/tosa.png",
+    img: "/assets/img/ecoles/tosa.jpg",
   },
 ];

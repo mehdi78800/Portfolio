@@ -26,10 +26,25 @@
       padding: 30px;
       position: relative;
 
+      .logo {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
+      }
+
+      h3 {
+        position: absolute;
+        margin-top: 10px;
+      }
+
+      .greta {
+        margin-left: 20px;
+      }
+
       .title {
         color: $accentColor;
       }
-      img {
+      .certif {
         width: 60%;
         position: absolute;
         top: 45%;
