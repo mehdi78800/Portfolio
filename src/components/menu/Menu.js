@@ -7,41 +7,41 @@ import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 
 import { useState, useEffect } from "react";
 
+const components = [
+  {
+    id: 3,
+    titre: "Home",
+    text: "intro",
+    icon: HomeIcon,
+  },
+  {
+    id: 1,
+    titre: "Experiences",
+    text: "experience",
+    icon: WorkIcon,
+  },
+  {
+    id: 2,
+    titre: "Formations",
+    text: "formation",
+    icon: SchoolIcon,
+  },
+
+  {
+    id: 4,
+    titre: "Projets",
+    text: "projet",
+    icon: CodeIcon,
+  },
+  {
+    id: 5,
+    titre: "Contact",
+    text: "contact",
+    icon: PermContactCalendarIcon,
+  },
+];
 export default function Menu(props) {
   const [activeId, setActiveId] = useState(3);
-  const components = [
-    {
-      id: 3,
-      titre: "Home",
-      text: "intro",
-      icon: HomeIcon,
-    },
-    {
-      id: 1,
-      titre: "Experiences",
-      text: "experience",
-      icon: WorkIcon,
-    },
-    {
-      id: 2,
-      titre: "Formations",
-      text: "formation",
-      icon: SchoolIcon,
-    },
-
-    {
-      id: 4,
-      titre: "Projets",
-      text: "projet",
-      icon: CodeIcon,
-    },
-    {
-      id: 5,
-      titre: "Contact",
-      text: "contact",
-      icon: PermContactCalendarIcon,
-    },
-  ];
 
   useEffect(() => {
     const idToActive = components.find(
