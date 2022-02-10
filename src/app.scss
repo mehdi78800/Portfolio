@@ -10,7 +10,7 @@
   .sections {
     width: 100%;
     height: calc(100vh - 70px);
-    background-color: lightsalmon;
+    background-color: $secondColor;
     position: relative;
     top: 70px;
     scroll-behavior: smooth;
@@ -24,6 +24,9 @@
       width: 100vw;
       height: calc(100vh - 70px);
       scroll-snap-align: start;
+    }
+    svg {
+      filter: drop-shadow(1.5px 3.5px 0.5px rgb(26, 26, 26));
     }
   }
 }

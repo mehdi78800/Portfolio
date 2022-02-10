@@ -16,10 +16,6 @@
   animation-iteration-count: infinite;
 }
 
-svg {
-  filter: drop-shadow(1.5px 3.5px 0.5px rgb(26, 26, 26));
-}
-
 .intro {
   background-color: $secondColor;
   display: grid;
@@ -30,7 +26,7 @@ svg {
   .text {
     background-color: $secondColor;
     color: $mainColor;
-    border-radius: 50px;
+    border-radius: 20px;
     // box-shadow: -5px -5px 20px #393c41, 5px 5px 20px rgb(20, 20, 20);
     box-shadow: -2px -5px 20px #363b44, 0px 5px 20px #14171a;
     padding-top: 70px;
@@ -41,7 +37,7 @@ svg {
       color: $accentColor;
     }
     h3 {
-      padding-top: 20px;
+      padding-top: 5px;
     }
   }
 
