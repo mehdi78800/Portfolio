@@ -35,7 +35,15 @@ export default function Experience(props) {
         {jobs.map((data, key) => {
           return (
             <div className="job" key={key}>
-              <h3>{data.company}</h3>
+              <div className="row">
+                <div className="col-3">
+                  <img className="logo" src={data.img} alt={data.company} />
+                </div>
+                <div className="col-9">
+                  <h3>{data.company}</h3>
+                </div>
+              </div>
+              <hr />
               <p className="title">{data.title}</p>
               <p className="date">
                 {data.start_date} - {data.end_date}
