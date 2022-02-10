@@ -33,8 +33,17 @@
         color: $accentColor;
       }
 
-      .resume {
-        margin-top: 50px;
+      h3 {
+        white-space: nowrap;
+        overflow: initial;
+        position: absolute;
+        margin-top: 10px;
+      }
+
+      .logo {
+        height: 50px;
+        width: 50px;
+        border-radius: 10px;
       }
 
       .btnContainer {

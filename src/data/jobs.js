@@ -5,6 +5,7 @@ export const jobs = [
     start_date: "Septembre 2021",
     end_date: "Aujourd'hui",
     location: "Paris, Île-de-France, France",
+    img: "/assets/img/experiences/sensee.png",
     resume:
       "Développement de différents modules du back-office, ajout de fonctionalités et résolution de bugs sur le site lentillesmoinscheres.com.",
     details:
@@ -16,6 +17,7 @@ export const jobs = [
     start_date: "Décembre 2019",
     end_date: "Septembre 2021",
     location: "Creil, Hauts-de-France, France",
+    img: "/assets/img/experiences/uc.jpg",
     resume:
       "Développement de l'outil back-office et ses modules de gestion des bénéficiaires d'aides sociales.",
     details:
@@ -27,6 +29,7 @@ export const jobs = [
     start_date: "Mars 2019",
     end_date: "Mai 2019",
     location: "Cergy, Île-de-France, France",
+    img: "/assets/img/experiences/ecam.jpg",
     resume:
       "Conception d'une application mobile destinée à améliorer la communication des personnes atteintes d'autisme.",
     details:
