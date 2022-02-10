@@ -10,8 +10,8 @@
     display: flex;
     overflow-x: scroll;
     width: 100%;
-    padding-right: 9.5%;
     height: 75%;
+    padding-right: 9.5%;
     cursor: grab;
 
     .job {
@@ -127,5 +127,8 @@
 @media (min-width: 1200px) {
   .swipeDiv {
     display: none;
+  }
+  .experience .jobs {
+    justify-content: center;
   }
 }

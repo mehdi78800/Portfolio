@@ -4,7 +4,7 @@ export const formations = [
     title: "Concepteur - Développeur D'Applications",
     start_date: "2019",
     end_date: "2021",
-    link: "/assets/img/diplomes/licence.png",
+    link: "/assets/img/diplomes/master.png",
   },
   {
     company: "Greta",

@@ -10,10 +10,7 @@ export default function Experience(props) {
   const ref = useRef();
   const rootMargin = "-100px";
   const [activeModal, setActiveModal] = useState(null);
-  const [show, setShow] = useState(false);
-
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
+  const { parentCallback } = props;
 
   const handleClose = () => setActiveModal(null);
   const handleShow = (e, key) => setActiveModal(key);
@@ -22,7 +19,7 @@ export default function Experience(props) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          props.parentCallback(ref.current.id);
+          parentCallback(ref.current.id);
         }
       },
       {
@@ -30,7 +27,7 @@ export default function Experience(props) {
       }
     );
     ref.current && observer.observe(ref.current);
-  }, []);
+  }, [parentCallback]);
 
   return (
     <div className="experience" id="experience" ref={ref}>
