@@ -36,7 +36,7 @@ export default function Projet(props) {
                   <img className="logoApp" src={data.img} alt={data.name} />
                 </div>
                 <div className="col-9">
-                  <h3>{data.name}</h3>
+                  <h3 className="cardTitle">{data.name}</h3>
                 </div>
               </div>
               <hr />

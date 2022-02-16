@@ -2,7 +2,7 @@ export const projets = [
   {
     name: "NetflixClone",
     url: "https://netflix-clone-3d872.web.app/",
-    img: "/assets/img/projets/timequizz.png",
+    img: "/assets/img/projets/netflix-clone.png",
     techno: "React.JS, Firebase",
     category: "Divertissement",
     date: "2021",

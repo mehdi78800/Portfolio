@@ -34,7 +34,13 @@ export default function Formation(props) {
                   <img className="logo" src={data.img} alt={data.company} />
                 </div>
                 <div className="col-9">
-                  <h3 className={data.company === "Greta" ? "greta" : ""}>
+                  <h3
+                    className={
+                      data.company === "Greta"
+                        ? "cardTitle extraMargin"
+                        : "cardTitle"
+                    }
+                  >
                     {data.company}
                   </h3>
                 </div>

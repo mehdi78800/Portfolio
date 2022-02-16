@@ -1,5 +1,11 @@
 @import "global.scss";
 
+* {
+  font-family: Montserrat, "Dosis", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
 .app {
   height: 100vh;
   color: $mainColor;
@@ -27,6 +33,14 @@
     }
     svg {
       filter: drop-shadow(1.5px 3.5px 0.5px rgb(26, 26, 26));
+    }
+
+    .cardTitle {
+      font-size: 24px;
+    }
+
+    .extraMargin {
+      margin-left: 20px;
     }
   }
 }

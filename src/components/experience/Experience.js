@@ -40,7 +40,15 @@ export default function Experience(props) {
                   <img className="logo" src={data.img} alt={data.company} />
                 </div>
                 <div className="col-9">
-                  <h3>{data.company}</h3>
+                  <h3
+                    className={
+                      data.company === "Sensee"
+                        ? "cardTitle extraMargin"
+                        : "cardTitle"
+                    }
+                  >
+                    {data.company}
+                  </h3>
                 </div>
               </div>
               <hr />
