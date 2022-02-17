@@ -109,7 +109,7 @@ export default function Contact(props) {
               <a href="tel:0766714446" target="_blank">
                 <img
                   className="social-icon"
-                  src="/assets/img/contact_icons/phone.png"
+                  src="/assets/img/contact_icons/phone.svg"
                   alt="phone"
                 />
               </a>

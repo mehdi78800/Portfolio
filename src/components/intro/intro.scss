@@ -45,14 +45,20 @@
     position: relative;
     top: -60px;
     height: 150px;
-    // .arrow {
-    //   transform: scale(2);
-    //   color: $accentColor;
-    //   transition: all 0.5s ease;
-    // }
-    // .arrow:hover {
-    //   transform: scale(3);
-    // }
+  }
+}
+
+.ityped-cursor {
+  color: $accentColor;
+  animation: blink 0.9s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
