@@ -1,0 +1,24 @@
+@import "../../global.scss";
+
+.left {
+  display: flex;
+  align-items: center;
+
+  .logo {
+    font-family: "Charm", cursive;
+    font-size: 28px;
+    font-weight: 700;
+    text-decoration: none;
+    color: $accentColor;
+    margin-right: 40px;
+
+    img {
+      height: 150px;
+      top: -40px;
+      left: 5px;
+      display: flex;
+      position: absolute;
+      // filter: invert(100%);
+    }
+  }
+}

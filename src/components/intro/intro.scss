@@ -1,0 +1,69 @@
+@import "../../global.scss";
+
+@keyframes rectFade {
+  from {
+    top: 0;
+  }
+  to {
+    top: 50px;
+  }
+}
+.arrow {
+  position: relative;
+  transform: scale(2.5);
+  color: $accentColor;
+  animation: rectFade 1s;
+  animation-iteration-count: infinite;
+}
+
+.intro {
+  background-color: $secondColor;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .text {
+    background-color: $secondColor;
+    color: $mainColor;
+    border-radius: 20px;
+    // box-shadow: -5px -5px 20px #393c41, 5px 5px 20px rgb(20, 20, 20);
+    box-shadow: -2px -5px 20px #363b44, 0px 5px 20px #14171a;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 400px;
+
+    h1 {
+      color: $accentColor;
+    }
+    h3 {
+      padding-top: 5px;
+    }
+  }
+
+  .link {
+    position: relative;
+    top: -60px;
+    height: 150px;
+  }
+}
+
+.ityped-cursor {
+  color: $accentColor;
+  animation: blink 0.9s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .intro .text {
+    width: 300px;
+  }
+}
