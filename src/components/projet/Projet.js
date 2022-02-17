@@ -52,7 +52,7 @@ export default function Projet(props) {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Essayer
+                  Visiter
                 </a>
               </div>
               <div className="btnContainer"></div>

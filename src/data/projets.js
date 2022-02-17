@@ -9,6 +9,16 @@ export const projets = [
     description: "Accédez aux bandes annonces des meilleures séries Netflix",
   },
   {
+    name: "Brizzy Esport",
+    url: "https://www.brizzy-esport.com/",
+    img: "/assets/img/projets/brizzy.png",
+    techno: "HTML, CSS, JS",
+    category: "Site web",
+    date: "2021",
+    description:
+      "Site vitrine de la Brizzy Esport, association gaming présente sur plusieurs jeux. ",
+  },
+  {
     name: "TimeQuizz",
     url: "https://timequizz-f13ee.web.app/",
     img: "/assets/img/projets/timequizz.png",

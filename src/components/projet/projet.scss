@@ -111,8 +111,11 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 2139px) {
   .applications {
     cursor: default !important;
+  }
+  #projet .swipeDiv {
+    display: none;
   }
 }
