@@ -1,15 +1,17 @@
 import "./contact.scss";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { config } from "../../config/config.js";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Modal } from "react-bootstrap";
 
 export default function Contact(props) {
   const ref = useRef();
   const form = useRef();
-
+  const [activeModal, setActiveModal] = useState(null);
   const rootMargin = "-100px";
   const { parentCallback } = props;
+  const handleClose = () => setActiveModal(null);
+  const handleShow = (e, key) => setActiveModal(key);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -28,21 +30,13 @@ export default function Contact(props) {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        config.serviceID,
-        config.templateID,
-        form.current,
-        config.userID
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm(
+      config.serviceID,
+      config.templateID,
+      form.current,
+      config.userID
+    );
+    e.target.reset();
   };
 
   return (
@@ -73,7 +67,11 @@ export default function Contact(props) {
                 />
               </Form.Group>
               <div className="btnContainer">
-                <Button className="detailsBtn" type="submit">
+                <Button
+                  className="detailsBtn"
+                  type="submit"
+                  onClick={(e) => handleShow(e, "emailModal")}
+                >
                   Envoyer
                 </Button>
               </div>
@@ -88,6 +86,7 @@ export default function Contact(props) {
               <a
                 href="https://www.linkedin.com/in/mehdi-regragui"
                 target="_blank"
+                rel="noreferrer"
               >
                 <img
                   className="social-icon"
@@ -97,7 +96,11 @@ export default function Contact(props) {
               </a>
             </div>
             <div className="col-3">
-              <a href="https://github.com/mehdi78800" target="_blank">
+              <a
+                href="https://github.com/mehdi78800"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img
                   className="social-icon"
                   src="/assets/img/contact_icons/github.png"
@@ -106,7 +109,7 @@ export default function Contact(props) {
               </a>
             </div>
             <div className="col-3">
-              <a href="tel:0766714446" target="_blank">
+              <a href="tel:0766714446" target="_blank" rel="noreferrer">
                 <img
                   className="social-icon"
                   src="/assets/img/contact_icons/phone.svg"
@@ -118,6 +121,7 @@ export default function Contact(props) {
               <a
                 href="/assets/img/cv_regragui_mehdi_developpeur_web.pdf"
                 target="_blank"
+                rel="noreferrer"
                 download
               >
                 <img
@@ -130,6 +134,24 @@ export default function Contact(props) {
           </div>
         </div>
       </div>
+
+      <Modal
+        key={"emailModal"}
+        show={activeModal === "emailModal"}
+        onHide={handleClose}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Merci pour votre message</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Votre message a été envoyé avec succès !</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button className="closeBtn" onClick={handleClose}>
+            Fermer
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   );
 }

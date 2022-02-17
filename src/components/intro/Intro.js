@@ -22,7 +22,6 @@ export default function Intro(props) {
     );
     ref.current && observer.observe(ref.current);
     init(textRef.current, {
-      showCursor: false,
       backDelay: 1000,
       backSpeed: 60,
       showCursor: true,
