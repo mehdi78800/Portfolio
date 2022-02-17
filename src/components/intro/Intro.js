@@ -36,7 +36,7 @@ export default function Intro(props) {
         <h2>Bonjour, je suis</h2>
         <h1>Mehdi Regragui</h1>
         <h3>
-          <span ref={textRef}></span>{" "}
+          <span ref={textRef}></span>
         </h3>
       </div>
       <div className="link">

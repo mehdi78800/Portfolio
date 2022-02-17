@@ -1,7 +1,6 @@
 @import "../../global.scss";
 
 .experience {
-  // background-color: lightcoral;
   background-color: $secondColor;
   justify-content: center;
   text-align: center;
@@ -136,6 +135,9 @@
 @media (min-width: 1200px) {
   .swipeDiv {
     display: none;
+  }
+  .jobs {
+    cursor: default !important;
   }
   .experience .jobs {
     justify-content: center;
